@@ -6,6 +6,8 @@
 
 body {
     height: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
 }
 
 /* Javascript */
@@ -38,6 +40,17 @@ img {
 /* Nav */
 nav {
     height: 10vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 10%;
+    font-size: 1.5rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
 }
 
 /* Gallerie */
@@ -47,7 +60,7 @@ nav {
     justify-content: center;
     width: 100vw;
     max-width: 2100px;
-    margin: 0rem auto;
+    margin: 0 auto;
     overflow: hidden;
 }
 
@@ -64,7 +77,7 @@ nav {
     max-height: 750px;
     transition: all 0.5s ease-out;
     object-fit: cover;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
 .gallerie div div {
@@ -77,6 +90,8 @@ nav {
     text-align: center;
     font-size: 1.25rem;
     opacity: 0;
+    width: 80%;
+    max-width: 40ch;
 }
 
 .gallerie div h2 {
