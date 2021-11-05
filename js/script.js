@@ -69,5 +69,6 @@ imgs.forEach(e => {
 
     imgDiv.addEventListener('click', i => {
         i.target.classList.toggle('clicked')
+        imgDivDiv.classList.toggle('clickedDiv')
     })
 })

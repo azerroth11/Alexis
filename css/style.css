@@ -29,10 +29,14 @@ body {
 
 .clicked {
     width: 100vw;
-    max-width: 100vw;
-    height: 100vh;
-    max-height: 100vh !important;
+    max-height: 97vh !important;
     object-fit: contain !important;
+    opacity: 1 !important;
+}
+
+.clickedDiv {
+    color: #fff;
+    scale: 1.5;
 }
 
 /* Commons */
@@ -96,10 +100,6 @@ nav a {
     width: 80%;
     max-width: 40ch;
     pointer-events: none;
-}
-
-.gallerie div h2 {
-    color: rgba(0, 0, 0, 0.75);
 }
 
 .gallerie div p {
