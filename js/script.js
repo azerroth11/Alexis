@@ -67,8 +67,8 @@ imgs.forEach(e => {
         imgDivDiv.classList.remove('visible')
     })
 
-    imgDiv.addEventListener('click', i => {
-        i.target.classList.toggle('clicked')
-        imgDivDiv.classList.toggle('clickedDiv')
-    })
+    // imgDiv.addEventListener('click', i => {
+    //     i.target.classList.toggle('clicked')
+    //     imgDivDiv.classList.toggle('clickedDiv')
+    // })
 })
