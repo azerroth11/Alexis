@@ -66,4 +66,8 @@ imgs.forEach(e => {
         img.classList.remove('hover')
         imgDivDiv.classList.remove('visible')
     })
+
+    imgDiv.addEventListener('click', i => {
+        i.target.classList.toggle('clicked')
+    })
 })
