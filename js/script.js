@@ -2,49 +2,49 @@ const gallerie = document.querySelector('.gallerie')
 const imgs = [
     {
         id: 'Convention',
-        src: './img/gallerie/Convention.jpg',
+        src: './img/gallerie/Convention.webp',
         year: '2021',
     },
     {
         id: 'Chateau Asca Bis',
-        src: './img/gallerie/Chateau Asca Bis.jpg',
+        src: './img/gallerie/Chateau Asca Bis.webp',
         year: '2021',
     },
-    { id: 'GAM', src: './img/gallerie/GAM.jpg', year: '2021' },
+    { id: 'GAM', src: './img/gallerie/GAM.webp', year: '2021' },
 
-    { id: 'Colloque', src: './img/gallerie/Colloque V2.jpg', year: '2021' },
+    { id: 'Colloque', src: './img/gallerie/Colloque V2.webp', year: '2021' },
     {
         id: 'Richard Allen',
-        src: './img/gallerie/Richard Allen.jpg',
+        src: './img/gallerie/Richard Allen.webp',
         year: '2021',
     },
     {
         id: 'Developpez - vous!',
-        src: './img/gallerie/Developpez-vous! Propaganda.jpg',
+        src: './img/gallerie/Developpez-vous! Propaganda.webp',
         year: '2021',
     },
     {
         id: 'Experimentation 1',
-        src: './img/gallerie/Experimentation 1.jpg',
+        src: './img/gallerie/Experimentation 1.webp',
         year: '2021',
     },
     {
         id: 'Experimentation 2',
-        src: './img/gallerie/Experimentation 2.jpg',
+        src: './img/gallerie/Experimentation 2.webp',
         year: '2021',
     },
     {
         id: 'Experimentation 5',
-        src: './img/gallerie/Experimentation 5.jpg',
+        src: './img/gallerie/Experimentation 5.webp',
         year: '2021',
     },
     {
         id: 'Typon Mini Fanzine',
-        src: './img/gallerie/Typon Mini Fanzine 1.jpg',
+        src: './img/gallerie/Typon Mini Fanzine 1.webp',
         year: '2021',
     },
-    { id: 'Usine', src: './img/gallerie/Usine.jpg', year: '2021' },
-    { id: 'Vitrine', src: './img/gallerie/Vitrine.jpg', year: '2021' },
+    { id: 'Usine', src: './img/gallerie/Usine.webp', year: '2021' },
+    { id: 'Vitrine', src: './img/gallerie/Vitrine.webp', year: '2021' },
 ]
 
 imgs.forEach(e => {
