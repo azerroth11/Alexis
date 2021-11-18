@@ -64,7 +64,7 @@ const imgs = [
 const videos = [
     {
         id: 'Cheap Wine - Sold Out',
-        src: './img/gallerie/CHEAP WINE SOLD OUT.webm',
+        src: './img/gallerie/CHEAP WINE SOLD OUT.mp4',
         year: '2021',
     },
 ]
