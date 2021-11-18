@@ -83,40 +83,40 @@ imgs.forEach(e => {
     const imgYear = imgDivDiv.appendChild(document.createElement('h2'))
     imgYear.innerText = e.year
 
-    imgDiv.addEventListener('mouseover', () => {
-        img.classList.add('hover')
-        imgDivDiv.classList.add('visible')
-    })
+    // imgDiv.addEventListener('mouseover', () => {
+    //     img.classList.add('hover')
+    //     imgDivDiv.classList.add('visible')
+    // })
 
-    imgDiv.addEventListener('mouseout', () => {
-        img.classList.remove('hover')
-        imgDivDiv.classList.remove('visible')
-    })
+    // imgDiv.addEventListener('mouseout', () => {
+    //     img.classList.remove('hover')
+    //     imgDivDiv.classList.remove('visible')
+    // })
 })
 
 videos.forEach(e => {
-    const imgDiv = gallerie.appendChild(document.createElement('div'))
-    const video = imgDiv.appendChild(document.createElement('video'))
+    const videoDiv = gallerie.appendChild(document.createElement('div'))
+    const video = videoDiv.appendChild(document.createElement('video'))
     video.src = e.src
     video.alt = `Vidéo ${e.id}`
     video.setAttribute('autoplay', true)
     video.setAttribute('muted', true)
-    const imgDivDiv = imgDiv.appendChild(document.createElement('div'))
-    const imgName = imgDivDiv.appendChild(document.createElement('h1'))
-    imgName.innerText = e.id
-    const imgDesc = imgDivDiv.appendChild(document.createElement('p'))
-    imgDesc.innerText =
+    const videoDivDiv = videoDiv.appendChild(document.createElement('div'))
+    const videoName = videoDivDiv.appendChild(document.createElement('h1'))
+    videoName.innerText = e.id
+    const videoDesc = videoDivDiv.appendChild(document.createElement('p'))
+    videoDesc.innerText =
         'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint aliquid nam ut obcaecati nostrum placeat!'
-    const imgYear = imgDivDiv.appendChild(document.createElement('h2'))
+    const imgYear = videoDivDiv.appendChild(document.createElement('h2'))
     imgYear.innerText = e.year
 
-    imgDiv.addEventListener('mouseover', () => {
-        video.classList.add('hover')
-        imgDivDiv.classList.add('visible')
-    })
+    // videoDiv.addEventListener('mouseover', () => {
+    //     video.classList.add('hover')
+    //     videoDivDiv.classList.add('visible')
+    // })
 
-    imgDiv.addEventListener('mouseout', () => {
-        video.classList.remove('hover')
-        imgDivDiv.classList.remove('visible')
-    })
+    // videoDiv.addEventListener('mouseout', () => {
+    //     video.classList.remove('hover')
+    //     videoDivDiv.classList.remove('visible')
+    // })
 })
