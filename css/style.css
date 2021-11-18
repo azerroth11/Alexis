@@ -34,7 +34,7 @@ nav {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 4vh;
+    margin-bottom: 2vh;
 }
 
 nav .logo {
@@ -49,7 +49,6 @@ nav .links {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
     max-width: 750px;
     margin: 0 auto;
     padding: 0.5rem 0.5rem 0 0.5rem;
@@ -60,6 +59,8 @@ nav .links img {
     height: 5vh;
     transition: scale 0.5s;
     scale: 1;
+    max-height: 30px;
+    object-fit: contain;
 }
 
 nav .links img:hover {
@@ -84,7 +85,8 @@ nav .links img:hover {
     overflow: hidden;
 }
 
-.gallerie div img {
+.gallerie div img,
+.gallerie div video {
     max-height: 700px;
     object-fit: cover;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);

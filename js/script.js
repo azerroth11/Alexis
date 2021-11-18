@@ -44,7 +44,29 @@ const imgs = [
         year: '2021',
     },
     { id: 'Usine', src: './img/gallerie/Usine.webp', year: '2021' },
+
     { id: 'Vitrine', src: './img/gallerie/Vitrine.webp', year: '2021' },
+    { id: 'Vitrine2', src: './img/gallerie/Vitrine2.webp', year: '2021' },
+
+    { id: 'Instagram', src: './img/gallerie/Instagram.webp', year: '2021' },
+    {
+        id: 'Cheap Wine',
+        src: './img/gallerie/Cheap Wine.webp',
+        year: '2021',
+    },
+    {
+        id: 'Cheapies',
+        src: './img/gallerie/Cheapies.webp',
+        year: '2021',
+    },
+]
+
+const videos = [
+    {
+        id: 'Cheap Wine - Sold Out',
+        src: './img/gallerie/CHEAP WINE SOLD OUT.webm',
+        year: '2021',
+    },
 ]
 
 imgs.forEach(e => {
@@ -68,6 +90,33 @@ imgs.forEach(e => {
 
     imgDiv.addEventListener('mouseout', () => {
         img.classList.remove('hover')
+        imgDivDiv.classList.remove('visible')
+    })
+})
+
+videos.forEach(e => {
+    const imgDiv = gallerie.appendChild(document.createElement('div'))
+    const video = imgDiv.appendChild(document.createElement('video'))
+    video.src = e.src
+    video.alt = `Vidéo ${e.id}`
+    video.setAttribute('autoplay', true)
+    video.setAttribute('muted', true)
+    const imgDivDiv = imgDiv.appendChild(document.createElement('div'))
+    const imgName = imgDivDiv.appendChild(document.createElement('h1'))
+    imgName.innerText = e.id
+    const imgDesc = imgDivDiv.appendChild(document.createElement('p'))
+    imgDesc.innerText =
+        'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint aliquid nam ut obcaecati nostrum placeat!'
+    const imgYear = imgDivDiv.appendChild(document.createElement('h2'))
+    imgYear.innerText = e.year
+
+    imgDiv.addEventListener('mouseover', () => {
+        video.classList.add('hover')
+        imgDivDiv.classList.add('visible')
+    })
+
+    imgDiv.addEventListener('mouseout', () => {
+        video.classList.remove('hover')
         imgDivDiv.classList.remove('visible')
     })
 })
