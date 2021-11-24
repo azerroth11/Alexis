@@ -87,7 +87,7 @@ nav .links img:hover {
 
 .gallerie div img,
 .gallerie div video {
-    max-height: 700px;
+    max-height: 400px;
     object-fit: cover;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     transition: opacity 0.25s ease-in;

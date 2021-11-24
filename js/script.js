@@ -77,21 +77,21 @@ imgs.forEach(e => {
     const imgDivDiv = imgDiv.appendChild(document.createElement('div'))
     const imgName = imgDivDiv.appendChild(document.createElement('h1'))
     imgName.innerText = e.id
-    const imgDesc = imgDivDiv.appendChild(document.createElement('p'))
-    imgDesc.innerText =
-        'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint aliquid nam ut obcaecati nostrum placeat!'
+    // const imgDesc = imgDivDiv.appendChild(document.createElement('p'))
+    // imgDesc.innerText =
+    //     'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint aliquid nam ut obcaecati nostrum placeat!'
     const imgYear = imgDivDiv.appendChild(document.createElement('h2'))
     imgYear.innerText = e.year
 
-    // imgDiv.addEventListener('mouseover', () => {
-    //     img.classList.add('hover')
-    //     imgDivDiv.classList.add('visible')
-    // })
+    imgDiv.addEventListener('mouseover', () => {
+        img.classList.add('hover')
+        imgDivDiv.classList.add('visible')
+    })
 
-    // imgDiv.addEventListener('mouseout', () => {
-    //     img.classList.remove('hover')
-    //     imgDivDiv.classList.remove('visible')
-    // })
+    imgDiv.addEventListener('mouseout', () => {
+        img.classList.remove('hover')
+        imgDivDiv.classList.remove('visible')
+    })
 })
 
 videos.forEach(e => {
