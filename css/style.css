@@ -34,7 +34,7 @@ nav {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 4vh;
+  margin: 1rem 0 4vh 0;
 }
 
 nav .logo {
