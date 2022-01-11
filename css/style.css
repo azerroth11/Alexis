@@ -1,3 +1,8 @@
+:root {
+  --main: hsl(355, 86%, 52%);
+  --secondary: hsl(197, 87%, 48%);
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -17,7 +22,7 @@ body {
 }
 
 .hover {
-  opacity: 0.075;
+  opacity: 0.4;
 }
 
 /* Commons */
@@ -101,10 +106,14 @@ nav .links img:hover {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  font-size: 1.5rem;
   opacity: 0;
   width: 80%;
   max-width: 40ch;
   pointer-events: none;
+  /* color: var(--main); */
+  /* text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 2px rgba(0, 0, 0, 1); */
+  text-shadow: -2px 0 0 var(--main), 2px 0 0 var(--secondary), 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 .gallerie div p {
