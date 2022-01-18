@@ -15,16 +15,6 @@ body {
   position: relative;
 }
 
-/* Javascript */
-.visible {
-  transition: opacity 0.5s ease-in;
-  opacity: 1 !important; /* Keep !important on*/
-}
-
-.hover {
-  opacity: 0.4;
-}
-
 /* Commons */
 img {
   max-width: 100%;
@@ -44,10 +34,10 @@ nav {
 
 nav .logo {
   width: 100%;
-  max-width: 700px;
+  max-width: 500px;
   margin: 0 auto;
   object-fit: contain;
-  padding: 0.5rem 0.5rem 0 0.5rem;
+  padding: 0 0.5rem;
 }
 
 nav .links {
@@ -73,49 +63,25 @@ nav .links img:hover {
   scale: 1.1;
 }
 
-/* Gallerie */
-.gallerie {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+/* Swiper */
+.swiper {
   width: 100%;
-  margin: 0 auto;
+  max-width: min(500px, 80%);
 }
 
-.gallerie div {
-  position: relative;
-  cursor: pointer;
-  padding: 2rem;
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-.gallerie div img,
-.gallerie div video {
-  max-height: 650px;
-  object-fit: cover;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  transition: opacity 0.25s ease-in;
-}
-
-.gallerie div div {
+.swiper-slide {
+  height: 700px;
   display: grid;
-  gap: 2rem;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  font-size: 1.5rem;
-  opacity: 0;
-  width: 80%;
-  max-width: 40ch;
-  pointer-events: none;
-  /* color: var(--main); */
-  /* text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 2px rgba(0, 0, 0, 1); */
-  text-shadow: -2px 0 0 var(--main), 2px 0 0 var(--secondary), 0 0 10px rgba(255, 255, 255, 0.5);
+  place-items: center;
+  border-radius: 15px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
 }
 
-.gallerie div p {
-  font-size: 1.5rem;
+.swiper-slide img {
+  object-fit: fill;
+  width: 100%;
+  height: 100%;
 }
