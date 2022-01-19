@@ -133,6 +133,13 @@ nav .links img:hover {
     0 0 10px rgba(255, 255, 255, 0.5);
 }
 
+.swiper-button-prev,
+.swiper-button-next {
+  color: #000;
+  text-shadow: 0 0 5px #fff, -2px 0 0 var(--main), 2px 0 0 var(--secondary),
+    0 0 10px rgba(255, 255, 255, 0.5);
+}
+
 /* Footer */
 footer {
   color: #000;
