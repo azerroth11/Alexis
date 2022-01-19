@@ -16,11 +16,12 @@ html {
 }
 
 body {
-  max-width: 1300px;
+  max-width: 1400px;
   margin: 0 auto;
   position: relative;
   height: 100vh;
   max-height: -webkit-fill-available;
+  overflow: hidden;
 }
 
 /* Commons */
@@ -79,7 +80,6 @@ nav .links img:hover {
   overflow: visible;
   transition: opacity 1s;
   height: calc(75vh - 8rem);
-  max-width: min(1300px, 100vw);
 }
 
 .galleryDetail {
@@ -95,7 +95,7 @@ nav .links img:hover {
 
 .swiper-slide img {
   object-fit: contain;
-  max-height: min(700px, 50vh);
+  max-height: min(700px, 45vh);
   border-radius: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
 }
