@@ -71,7 +71,7 @@ const data = [
 function createMainSwiper() {
   const body = document.querySelector('body')
   const swiperDiv = body.appendChild(document.createElement('div'))
-  swiperDiv.classList.add('swiper')
+  swiperDiv.classList.add('swiper', 'opacity')
   const swipperWrapper = swiperDiv.appendChild(document.createElement('div'))
   swipperWrapper.classList.add('swiper-wrapper')
   data.forEach((folder) => {
@@ -96,7 +96,6 @@ function createMainSwiper() {
             galleryDetail.classList.add('galleryDetail', 'opacity')
             const galleryWrapper = galleryDetail.appendChild(document.createElement('div'))
             galleryWrapper.classList.add('swiper-wrapper')
-
             data.forEach((folder) => {
               if (folder.id == swiperSlideBtn.previousElementSibling.innerText) {
                 folder.photos.forEach((photo) => {
@@ -111,6 +110,23 @@ function createMainSwiper() {
             prevArrow.classList.add('swiper-button-prev')
             const nextArrow = galleryDetail.appendChild(document.createElement('div'))
             nextArrow.classList.add('swiper-button-next')
+            const galleryDetailInnerDiv = galleryDetail.appendChild(document.createElement('div'))
+            galleryDetailInnerDiv.classList.add('galleryDetailInnerDiv')
+            const swiperInnerH1 = galleryDetailInnerDiv.appendChild(document.createElement('h1'))
+            swiperInnerH1.innerText = folder.id
+            const swiperBackBtn = galleryDetailInnerDiv.appendChild(document.createElement('a'))
+            swiperBackBtn.href = 'javascript:;'
+            swiperBackBtn.classList.add('discover')
+            swiperBackBtn.innerText = 'Retour'
+            swiperBackBtn.addEventListener('click', () => {
+              galleryDetail.classList.toggle('opacity')
+              setTimeout(() => {
+                galleryDetail.remove()
+              }, 750)
+              setTimeout(() => {
+                createMainSwiper()
+              }, 750)
+            })
             const swiper2 = new Swiper('.galleryDetail', {
               effect: 'coverflow',
               grabCursor: true,
@@ -151,6 +167,7 @@ function createMainSwiper() {
     normalizeSlideIndex: false,
     initialSlide: 2,
   })
+  swiperDiv.classList.remove('opacity')
 }
 
 createMainSwiper()
