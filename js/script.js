@@ -70,7 +70,8 @@ const data = [
 
 function createMainSwiper() {
   const body = document.querySelector('body')
-  const swiperDiv = body.appendChild(document.createElement('div'))
+  const swiperDiv = document.createElement('div')
+  body.insertBefore(swiperDiv, document.querySelector('footer'))
   swiperDiv.classList.add('swiper', 'opacity')
   const swipperWrapper = swiperDiv.appendChild(document.createElement('div'))
   swipperWrapper.classList.add('swiper-wrapper')
@@ -92,7 +93,8 @@ function createMainSwiper() {
           swiperDiv.classList.toggle('opacity')
           setTimeout(() => {
             swiperDiv.remove()
-            const galleryDetail = body.appendChild(document.createElement('div'))
+            const galleryDetail = document.createElement('div')
+            body.insertBefore(galleryDetail, document.querySelector('footer'))
             galleryDetail.classList.add('galleryDetail', 'opacity')
             const galleryWrapper = galleryDetail.appendChild(document.createElement('div'))
             galleryWrapper.classList.add('swiper-wrapper')
