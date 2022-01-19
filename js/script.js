@@ -61,9 +61,9 @@ const data = [
       { src: './img/gallerie/Street Arts/Coeur de Ville7.webp' },
       { src: './img/gallerie/Street Arts/Coeur de Ville8.webp' },
       { src: './img/gallerie/Street Arts/Coeur de Ville9.webp' },
-      { src: './img/gallerie/Street Arts/Usine.webp', main: true },
-      { src: './img/gallerie/Street Arts/Vitrine.webp' },
       { src: './img/gallerie/Street Arts/Vitrine2.webp' },
+      { src: './img/gallerie/Street Arts/Vitrine.webp' },
+      { src: './img/gallerie/Street Arts/Usine.webp', main: true },
     ],
   },
 ]
@@ -96,6 +96,7 @@ function createMainSwiper() {
             galleryDetail.classList.add('galleryDetail', 'opacity')
             const galleryWrapper = galleryDetail.appendChild(document.createElement('div'))
             galleryWrapper.classList.add('swiper-wrapper')
+
             data.forEach((folder) => {
               if (folder.id == swiperSlideBtn.previousElementSibling.innerText) {
                 folder.photos.forEach((photo) => {
@@ -106,13 +107,28 @@ function createMainSwiper() {
                 })
               }
             })
+            const prevArrow = galleryDetail.appendChild(document.createElement('div'))
+            prevArrow.classList.add('swiper-button-prev')
+            const nextArrow = galleryDetail.appendChild(document.createElement('div'))
+            nextArrow.classList.add('swiper-button-next')
             const swiper2 = new Swiper('.galleryDetail', {
+              effect: 'coverflow',
               grabCursor: true,
               centeredSlides: true,
               slidesPerView: 'auto',
-              spaceBetween: 30,
+              coverflowEffect: {
+                rotate: 1,
+                stretch: 1,
+                depth: 700,
+                modifier: 1,
+                slideShadows: false,
+              },
               normalizeSlideIndex: false,
-              initialSlide: 2,
+              initialSlide: 0,
+              navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+              },
             })
             galleryDetail.classList.remove('opacity')
           }, 750)

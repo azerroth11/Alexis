@@ -16,10 +16,11 @@ html {
 }
 
 body {
-  max-width: 1920px;
+  max-width: 1300px;
   margin: 0 auto;
   position: relative;
-  height: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
 /* Commons */
@@ -36,7 +37,7 @@ nav {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  margin: 1rem 0 4vh 0;
+  margin: 1rem 0 0 0;
 }
 
 nav .logo {
@@ -73,29 +74,35 @@ nav .links img:hover {
 /* Swiper */
 .swiper,
 .galleryDetail {
-  margin: 7.5vh auto;
+  margin: 0 auto;
   padding: 1rem 0;
   overflow: visible;
   transition: opacity 1s;
+  height: calc(75vh - 8rem);
 }
 
 .galleryDetail {
-  max-width: 1300px;
-  /* overflow: hidden; */
+  max-width: 100%;
+  padding: 1rem 4rem;
+  overflow: hidden;
 }
 
 .swiper-slide {
   display: grid;
   place-items: center;
   border-radius: 15px;
-  width: fit-content;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  width: fit-content !important;
 }
 
 .swiper-slide img {
   object-fit: contain;
   max-height: min(700px, 50vh);
   border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.galleryDetail .swiper-slide img {
+  max-height: min(800px, 60vh);
 }
 
 .swiper-slide div {
@@ -106,8 +113,9 @@ nav .links img:hover {
   position: absolute;
   bottom: -8rem;
   display: grid;
-  gap: 1rem;
+  gap: 0.75rem;
   place-items: center;
+  width: 350px;
 }
 
 .swiper-slide-active div a {
@@ -123,6 +131,26 @@ nav .links img:hover {
 .swiper-slide-active div a:hover {
   box-shadow: 0 0 5px #000, -4px -4px 0 var(--main), 4px 4px 0 var(--secondary),
     0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Footer */
+footer {
+  color: #000;
+  position: absolute;
+  bottom: 7.5px;
+  left: 0;
+  width: 100%;
+}
+
+footer a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer p {
+  margin: 0 auto;
+  text-align: center;
 }
 
 /* Javascript */
@@ -141,4 +169,14 @@ nav .links img:hover {
   opacity: 0;
   position: absolute;
   left: 50%;
+}
+
+@media screen and (min-width: 1000px) {
+  nav .logo {
+    margin: 0;
+  }
+
+  nav .links {
+    margin: 0;
+  }
 }
