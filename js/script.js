@@ -51,6 +51,7 @@ const data = [
   {
     id: 'Street Art',
     photos: [
+      { src: './img/gallerie/Street Arts/Usine.webp', main: true },
       { src: './img/gallerie/Street Arts/Building.webp' },
       { src: './img/gallerie/Street Arts/Coeur de Ville.webp' },
       { src: './img/gallerie/Street Arts/Coeur de Ville2.webp' },
@@ -63,7 +64,6 @@ const data = [
       { src: './img/gallerie/Street Arts/Coeur de Ville9.webp' },
       { src: './img/gallerie/Street Arts/Vitrine2.webp' },
       { src: './img/gallerie/Street Arts/Vitrine.webp' },
-      { src: './img/gallerie/Street Arts/Usine.webp', main: true },
     ],
   },
 ]
@@ -162,7 +162,7 @@ function createMainSwiper() {
       stretch: 100,
       depth: 100,
       modifier: 1,
-      slideShadows: true,
+      slideShadows: false,
     },
     normalizeSlideIndex: false,
     initialSlide: 2,
