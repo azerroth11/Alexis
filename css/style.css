@@ -21,7 +21,6 @@ body {
   position: relative;
   height: 100vh;
   max-height: -webkit-fill-available;
-  overflow: hidden;
 }
 
 /* Commons */
@@ -80,6 +79,7 @@ nav .links img:hover {
   overflow: visible;
   transition: opacity 1s;
   height: calc(75vh - 8rem);
+  max-width: min(1300px, 100vw);
 }
 
 .galleryDetail {
