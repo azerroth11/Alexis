@@ -19,7 +19,7 @@ body {
   max-width: 1300px;
   margin: 0 auto;
   position: relative;
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
 }
 
