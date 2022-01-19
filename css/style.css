@@ -9,10 +9,16 @@
   margin: 0;
 }
 
+html {
+  height: 100vh;
+}
+
 body {
   max-width: 1920px;
   margin: 0 auto;
   position: relative;
+  height: 100%;
+  overflow: hidden;
 }
 
 /* Commons */
@@ -64,20 +70,43 @@ nav .links img:hover {
 }
 
 /* Swiper */
+.swiper {
+  margin: 7.5vh auto;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
 .swiper-slide {
   display: grid;
   place-items: center;
   border-radius: 15px;
-  font-size: 22px;
-  font-weight: bold;
-  color: #fff;
+  width: fit-content !important;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-  width: fit-content;
 }
 
 .swiper-slide img {
   object-fit: contain;
-  width: 100%;
-  height: 100%;
-  /* max-height: 750px; */
+  max-height: min(700px, 50vh);
+  border-radius: 15px;
+}
+
+.swiper-slide div {
+  display: none;
+}
+
+.swiper-slide-active div {
+  position: absolute;
+  bottom: -8rem;
+  display: grid;
+  gap: 1rem;
+  place-items: center;
+}
+
+.swiper-slide-active div a {
+  text-decoration: none;
+  color: inherit;
+  padding: 1rem 2rem;
+  box-shadow: 0 0 5px #000, -2px -2px 0 var(--main), 2px 2px 0 var(--secondary),
+    0 0 10px rgba(255, 255, 255, 0.5);
+  font-size: 1.5rem;
 }
