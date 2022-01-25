@@ -1,6 +1,6 @@
 const data = [
   {
-    id: 'Events / Évènements',
+    id: 'Events',
     photos: [
       { src: './img/gallerie/Events/affiche Pogo WEB.webp' },
       { src: './img/gallerie/Events/Affiche Rouher 2021.webp' },
@@ -27,7 +27,7 @@ const data = [
     photos: [{ src: './img/gallerie/Expositions/Affiche 40 x 60 (A2) (main).webp', main: true }],
   },
   {
-    id: 'Projets perso',
+    id: 'Personnal Projects',
     photos: [
       { src: './img/gallerie/Personnal Projects/Experimentation 1.webp', main: true },
       { src: './img/gallerie/Personnal Projects/Experimentation 2.webp' },
@@ -82,13 +82,10 @@ function createMainSwiper() {
         swiperSlide.classList.add('swiper-slide')
         const swiperImg = swiperSlide.appendChild(document.createElement('img'))
         swiperImg.src = photo.src
-        const swiperSlideInnerDiv = swiperSlide.appendChild(document.createElement('div'))
-        const swiperInnerH1 = swiperSlideInnerDiv.appendChild(document.createElement('h1'))
-        swiperInnerH1.innerText = folder.id
-        const swiperSlideBtn = swiperSlideInnerDiv.appendChild(document.createElement('a'))
+        const swiperSlideBtn = swiperSlide.appendChild(document.createElement('a'))
         swiperSlideBtn.href = 'javascript:;'
         swiperSlideBtn.classList.add('discover')
-        swiperSlideBtn.innerText = 'Découvrir'
+        swiperSlideBtn.innerText = folder.id
         swiperSlideBtn.addEventListener('click', () => {
           swiperDiv.classList.toggle('opacity')
           setTimeout(() => {
@@ -99,7 +96,7 @@ function createMainSwiper() {
             const galleryWrapper = galleryDetail.appendChild(document.createElement('div'))
             galleryWrapper.classList.add('swiper-wrapper')
             data.forEach((folder) => {
-              if (folder.id == swiperSlideBtn.previousElementSibling.innerText) {
+              if (folder.id == swiperSlideBtn.innerText) {
                 folder.photos.forEach((photo) => {
                   const swiperSlide = galleryWrapper.appendChild(document.createElement('div'))
                   swiperSlide.classList.add('swiper-slide')
